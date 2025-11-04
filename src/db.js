@@ -23,3 +23,7 @@ const initializeDataBase = async () => {
         console.error('Error initializing database:', err);
     }
 }
+
+initializeDataBase();
+
+export default pool;
