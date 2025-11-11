@@ -6,7 +6,7 @@ export const createPost = async (req, res) => {
     try {
         const insertPostQuery = `
             INSERT INTO posts (content)
-            VALUES ($1) RETURNING *
+            VALUES ($1)
             RETURNING id, content, created_at`;
 
         const result = await query(insertPostQuery, [content]);
